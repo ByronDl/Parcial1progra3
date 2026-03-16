@@ -16,7 +16,7 @@ namespace Progra3Parcial1by
 
         List<Doctor> doctores = new List<Doctor>();
         List<Paciente> pacientes = new List<Paciente>();
-        //List<Inscripcion> inscripciones = new List<Inscripcion>();
+        List<Cita> citas = new List<Cita>();
         public Form1()
         {
             InitializeComponent();
@@ -80,6 +80,56 @@ namespace Progra3Parcial1by
             comboPaciente.DataSource = pacientes;
             comboPaciente.DisplayMember = "Nombre";
         }
+        private void btnGuardarCita_Click(object sender, EventArgs e)
+        {
+            Doctor doc = (Doctor)comboDoctor.SelectedItem;
+            Paciente pac = (Paciente)comboPaciente.SelectedItem;
 
+            DateTime fechaHora = dateFecha.Value.Date + dateHora.Value.TimeOfDay;
+
+            Cita nueva = new Cita
+            {
+                IDDoctor = doc.ID,
+                DPIPaciente = pac.DPI,
+                FechaHora = fechaHora
+            };
+
+            citas.Add(nueva);
+
+            string ruta = Application.StartupPath + "\\citas.txt";
+
+            File.AppendAllText(ruta,
+                nueva.IDDoctor + "," +
+                nueva.DPIPaciente + "," +
+                nueva.FechaHora +
+                Environment.NewLine);
+
+            MessageBox.Show("Cita registrada");
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Doctor doctor = (Doctor)comboDoctor.SelectedItem;
+            Paciente paciente = (Paciente)comboPaciente.SelectedItem;
+
+            DateTime fechaHora = dateFecha.Value.Date + dateHora.Value.TimeOfDay;
+
+            Cita nueva = new Cita();
+            nueva.IDDoctor = doctor.ID;
+            nueva.DPIPaciente = paciente.DPI;
+            nueva.FechaHora = fechaHora;
+
+            citas.Add(nueva);
+
+            string ruta = Application.StartupPath + "\\citas.txt";
+
+            File.AppendAllText(ruta,
+                nueva.IDDoctor + "," +
+                nueva.DPIPaciente + "," +
+                nueva.FechaHora +
+                Environment.NewLine);
+
+            MessageBox.Show("Cita guardada correctamente");
+        }
     }
 }
