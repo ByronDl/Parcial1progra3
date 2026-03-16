@@ -42,6 +42,7 @@
             this.btnMostrarCitas = new System.Windows.Forms.Button();
             this.btnOrdenarFecha = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnEstadisticas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -168,11 +169,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnEstadisticas
+            // 
+            this.btnEstadisticas.Location = new System.Drawing.Point(277, 350);
+            this.btnEstadisticas.Name = "btnEstadisticas";
+            this.btnEstadisticas.Size = new System.Drawing.Size(144, 62);
+            this.btnEstadisticas.TabIndex = 15;
+            this.btnEstadisticas.Text = "Estadisticas";
+            this.btnEstadisticas.UseVisualStyleBackColor = true;
+            this.btnEstadisticas.Click += new System.EventHandler(this.btnEstadisticas_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1098, 450);
+            this.Controls.Add(this.btnEstadisticas);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnOrdenarFecha);
             this.Controls.Add(this.btnMostrarCitas);
@@ -211,6 +223,7 @@
         private System.Windows.Forms.Button btnMostrarCitas;
         private System.Windows.Forms.Button btnOrdenarFecha;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEstadisticas;
     }
 }
 

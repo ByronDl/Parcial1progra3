@@ -193,6 +193,24 @@ namespace Progra3Parcial1by
                 listBoxCitas.Items.Add(texto);
             }
         }
+
+        private void btnEstadisticas_Click(object sender, EventArgs e)
+        {
+            int totalCitas = citas.Count;
+
+            string mensaje = "Total de citas registradas: " + totalCitas + "\n\n";
+
+            foreach (Doctor doctor in doctores)
+            {
+                int cantidad = citas.Count(c => c.IDDoctor == doctor.ID);
+
+                mensaje += doctor.Nombre + " (" + doctor.Especialidad + ") : "
+                           + cantidad + " citas\n";
+            }
+
+            MessageBox.Show(mensaje);
+
+        }
     }
    }
 
