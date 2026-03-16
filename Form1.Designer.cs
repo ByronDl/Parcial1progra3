@@ -37,9 +37,9 @@
             this.dateFecha = new System.Windows.Forms.DateTimePicker();
             this.dateHora = new System.Windows.Forms.DateTimePicker();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.listBoxCitas = new System.Windows.Forms.ListBox();
+            this.btnMostrarCitas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -118,32 +118,42 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(462, 64);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(315, 201);
-            this.dataGridView1.TabIndex = 9;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(592, 24);
+            this.label5.Location = new System.Drawing.Point(732, 19);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 16);
             this.label5.TabIndex = 10;
             this.label5.Text = "Reporte";
             // 
+            // listBoxCitas
+            // 
+            this.listBoxCitas.FormattingEnabled = true;
+            this.listBoxCitas.ItemHeight = 16;
+            this.listBoxCitas.Location = new System.Drawing.Point(470, 53);
+            this.listBoxCitas.Name = "listBoxCitas";
+            this.listBoxCitas.Size = new System.Drawing.Size(545, 276);
+            this.listBoxCitas.TabIndex = 11;
+            // 
+            // btnMostrarCitas
+            // 
+            this.btnMostrarCitas.Location = new System.Drawing.Point(692, 354);
+            this.btnMostrarCitas.Name = "btnMostrarCitas";
+            this.btnMostrarCitas.Size = new System.Drawing.Size(149, 51);
+            this.btnMostrarCitas.TabIndex = 12;
+            this.btnMostrarCitas.Text = "Mostrar";
+            this.btnMostrarCitas.UseVisualStyleBackColor = true;
+            this.btnMostrarCitas.Click += new System.EventHandler(this.btnMostrarCitas_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1098, 450);
+            this.Controls.Add(this.btnMostrarCitas);
+            this.Controls.Add(this.listBoxCitas);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.dateHora);
             this.Controls.Add(this.dateFecha);
@@ -156,7 +166,6 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,8 +182,9 @@
         private System.Windows.Forms.DateTimePicker dateFecha;
         private System.Windows.Forms.DateTimePicker dateHora;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ListBox listBoxCitas;
+        private System.Windows.Forms.Button btnMostrarCitas;
     }
 }
 

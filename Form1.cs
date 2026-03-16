@@ -131,5 +131,26 @@ namespace Progra3Parcial1by
 
             MessageBox.Show("Cita guardada correctamente");
         }
+
+        private void btnMostrarCitas_Click(object sender, EventArgs e)
+        {
+   
+        
+            listBoxCitas.Items.Clear();
+
+            foreach (Cita cita in citas)
+            {
+                Doctor doctor = doctores.Find(d => d.ID == cita.IDDoctor);
+                Paciente paciente = pacientes.Find(p => p.DPI == cita.DPIPaciente);
+
+                string texto = doctor.Nombre + " - " +
+                               doctor.Especialidad + " - " +
+                               paciente.Nombre + " - " +
+                               cita.FechaHora.ToString("dd/MM/yyyy HH:mm");
+
+                listBoxCitas.Items.Add(texto);
+            }
+        }
     }
-}
+   }
+
