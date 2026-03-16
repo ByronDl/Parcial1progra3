@@ -40,6 +40,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.listBoxCitas = new System.Windows.Forms.ListBox();
             this.btnMostrarCitas = new System.Windows.Forms.Button();
+            this.btnOrdenarFecha = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -138,7 +140,7 @@
             // 
             // btnMostrarCitas
             // 
-            this.btnMostrarCitas.Location = new System.Drawing.Point(692, 354);
+            this.btnMostrarCitas.Location = new System.Drawing.Point(866, 360);
             this.btnMostrarCitas.Name = "btnMostrarCitas";
             this.btnMostrarCitas.Size = new System.Drawing.Size(149, 51);
             this.btnMostrarCitas.TabIndex = 12;
@@ -146,11 +148,33 @@
             this.btnMostrarCitas.UseVisualStyleBackColor = true;
             this.btnMostrarCitas.Click += new System.EventHandler(this.btnMostrarCitas_Click);
             // 
+            // btnOrdenarFecha
+            // 
+            this.btnOrdenarFecha.Location = new System.Drawing.Point(494, 358);
+            this.btnOrdenarFecha.Name = "btnOrdenarFecha";
+            this.btnOrdenarFecha.Size = new System.Drawing.Size(147, 47);
+            this.btnOrdenarFecha.TabIndex = 13;
+            this.btnOrdenarFecha.Text = "Ordenar por fecha";
+            this.btnOrdenarFecha.UseVisualStyleBackColor = true;
+            this.btnOrdenarFecha.Click += new System.EventHandler(this.btnOrdenarFecha_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(664, 362);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(141, 43);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Ordenar por doctor";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1098, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnOrdenarFecha);
             this.Controls.Add(this.btnMostrarCitas);
             this.Controls.Add(this.listBoxCitas);
             this.Controls.Add(this.label5);
@@ -185,6 +209,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox listBoxCitas;
         private System.Windows.Forms.Button btnMostrarCitas;
+        private System.Windows.Forms.Button btnOrdenarFecha;
+        private System.Windows.Forms.Button button1;
     }
 }
 

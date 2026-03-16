@@ -151,6 +151,48 @@ namespace Progra3Parcial1by
                 listBoxCitas.Items.Add(texto);
             }
         }
+
+        private void btnOrdenarFecha_Click(object sender, EventArgs e)
+        {
+            var citasOrdenadas = citas.OrderBy(c => c.FechaHora).ToList();
+
+            listBoxCitas.Items.Clear();
+
+            foreach (Cita cita in citasOrdenadas)
+            {
+                Doctor doctor = doctores.Find(d => d.ID == cita.IDDoctor);
+                Paciente paciente = pacientes.Find(p => p.DPI == cita.DPIPaciente);
+
+                string texto = doctor.Nombre + " - " +
+                               doctor.Especialidad + " - " +
+                               paciente.Nombre + " - " +
+                               cita.FechaHora.ToString("dd/MM/yyyy HH:mm");
+
+                listBoxCitas.Items.Add(texto);
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var citasOrdenadas = citas.OrderBy(c =>
+      doctores.Find(d => d.ID == c.IDDoctor).Nombre).ToList();
+
+            listBoxCitas.Items.Clear();
+
+            foreach (Cita cita in citasOrdenadas)
+            {
+                Doctor doctor = doctores.Find(d => d.ID == cita.IDDoctor);
+                Paciente paciente = pacientes.Find(p => p.DPI == cita.DPIPaciente);
+
+                string texto = doctor.Nombre + " - " +
+                               doctor.Especialidad + " - " +
+                               paciente.Nombre + " - " +
+                               cita.FechaHora.ToString("dd/MM/yyyy HH:mm");
+
+                listBoxCitas.Items.Add(texto);
+            }
+        }
     }
    }
 
